@@ -15,7 +15,7 @@
 synced_dir=$1
 
 # Path to the `boot` directory which contains scripts that are used
-# by this provisioning script.
+# by this startup script.
 boot_dir="${synced_dir}/boot"
 
 # Startup scripts go here...
