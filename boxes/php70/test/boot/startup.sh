@@ -5,12 +5,8 @@
 #
 # Vagrant runs this script whenever the VM is started up.
 #
-# Use the startup script to:
-#
-# - The local source repository with the remote one, so updating the
-#   application code to the latest development build.
-# - Install/update the application's dependencies.
-# - Start the Node.js application under PM2.
+# Startup scripts may be used to start various processes as required for the
+# application, or to update dependencies or create build artefacts, etc.
 # ==============================================================================
 
 # Capture input arguments.
@@ -22,5 +18,4 @@ synced_dir=$1
 # by this provisioning script.
 boot_dir="${synced_dir}/boot"
 
-# Startup scripts may be used to start various processes as required for the
-# application, or to update dependencies or create build artefacts, etc.
+# Startup scripts go here...
