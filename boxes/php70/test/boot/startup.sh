@@ -18,4 +18,10 @@ synced_dir=$1
 # by this startup script.
 boot_dir="${synced_dir}/boot"
 
+# Print the "booting" message.
+source "${boot_dir}/inc/msg/booting.sh"
+
 # Startup scripts go here...
+
+# Print the "finished" message.
+source "${boot_dir}/inc/msg/finish.sh"

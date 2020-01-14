@@ -9,8 +9,7 @@ read -r -d '' msg << EOF
 │                                                                              │
 │   FINISHED                                                                   │
 │                                                                              │
-│   The local development box is ready.                                        │
-│   Running Node.js applications are listed below.                             │
+│   Your local development box is ready.                                       │
 │   Type "vagrant ssh" to log in.                                              │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘

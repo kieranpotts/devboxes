@@ -34,7 +34,7 @@ fi
 # Load helper functions.
 source "${boot_dir}/inc/functions.sh"
 
-# Print start message.
+# Print the "provisioning" message.
 source "${boot_dir}/inc/msg/provisioning.sh"
 
 # Add application hostnames to `/etc/hosts`.
