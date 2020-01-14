@@ -54,7 +54,7 @@ sudo su -c "openssl req -new -out ${application_ssl_csr_path} \
 # Sign the SSL certificate.
 sudo su -c "openssl x509 -req -days 3650 -in ${application_ssl_csr_path} \
   -signkey ${application_ssl_key_path} \
-  -out ${application_ssl_crt_path}
+  -out ${application_ssl_crt_path} \
   -extensions ext -extfile ${application_ssl_cnf_path}" &> /dev/null
 
 startNewTask "Configuring Nginx to serve the application"
