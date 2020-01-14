@@ -95,12 +95,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, :guest => 80, :host => 80
   config.vm.network :forwarded_port, :guest => 443, :host => 443
 
-  # Port forwarding for Node.js Inspector.
-  config.vm.network :forwarded_port, :guest => 9229, :host => 9229
-
-  # Port forwarding for MongoDB.
-  config.vm.network :forwarded_port, :guest => 27017, :host => 27017
-
   # Disable the default `/vagrant` directory share...
   config.vm.synced_folder ".", "/vagrant", :disabled => true
 
