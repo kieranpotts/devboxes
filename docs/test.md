@@ -44,7 +44,9 @@ Having [built](built.md) a new version of one of the local development boxes, yo
     $ vagrant up --provision
     ```
 
-5.  While the text box is provisioned, add the following configuration to your local system's `hosts` file.
+5.  While the text box is provisioned, add the following configuration to your local system's `hosts` file. 
+
+    For iOS and Unix-like systems, the path to the hosts file is `/etc/hosts`. For Windows it is `\Windows\System32\drivers\etc\hosts`.
 
     ```
     192.168.200.200 [name].devbox.local
