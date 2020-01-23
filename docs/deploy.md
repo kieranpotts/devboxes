@@ -4,9 +4,9 @@ Vagrant boxes are large — occupying several gigabytes of disk space, typically
 
 1.  Login to Vagrant Cloud.
 
-    Go to https://app.vagrantup.com/kieranpotts/boxes/ and choose the box you want to update.
+    Go to https://app.vagrantup.com/kieranpotts/ and choose the box you want to update. Click **New Version**.
 
-    Click **New Version**.
+    To add a first version of a brand new box, go to the Dashboard then click **New Vagrant Box**.
 
 2.  Input the new **Version Number**. This must be in the format `[0-9]+[.][0-9]+[.][0-9]+`. Do not include the "v" prefix. Please refer to our [versioning policy](versioning.md) for our Vagrant development boxes.
 

@@ -38,24 +38,27 @@ source "${boot_dir}/inc/functions.sh"
 source "${boot_dir}/inc/msg/start.sh"
 
 # Update and install system utilities.
-source "${boot_dir}/inc/update.sh"
-source "${boot_dir}/inc/upgrade.sh"
-source "${boot_dir}/inc/utils.sh"
-source "${boot_dir}/inc/hosts.sh"
-
-# Developer and sysadmin tools.
-source "${boot_dir}/inc/git.sh"
-source "${boot_dir}/inc/vim.sh"
-source "${boot_dir}/inc/htop.sh"
-source "${boot_dir}/inc/tmux.sh"
-source "${boot_dir}/inc/ngrok.sh"
+source "${boot_dir}/inc/sys/update.sh"
+source "${boot_dir}/inc/sys/upgrade.sh"
+source "${boot_dir}/inc/sys/utils.sh"
+source "${boot_dir}/inc/sys/hosts.sh"
 
 # Application software.
-source "${boot_dir}/inc/nginx.sh"
-source "${boot_dir}/inc/mariadb.sh"
-source "${boot_dir}/inc/php.sh"
-source "${boot_dir}/inc/redis.sh"
-source "${boot_dir}/inc/sendmail.sh"
+source "${boot_dir}/inc/app/nodejs.sh"
+source "${boot_dir}/inc/app/nginx.sh"
+source "${boot_dir}/inc/app/mariadb.sh"
+source "${boot_dir}/inc/app/mongodb.sh"
+source "${boot_dir}/inc/app/redis.sh"
+source "${boot_dir}/inc/app/sendmail.sh"
+
+# More developer and sysadmin tools.
+source "${boot_dir}/inc/dev/git.sh"
+source "${boot_dir}/inc/dev/htop.sh"
+source "${boot_dir}/inc/dev/maildev.sh"
+source "${boot_dir}/inc/dev/ngrok.sh"
+source "${boot_dir}/inc/dev/tmux.sh"
+source "${boot_dir}/inc/dev/vim.sh"
+source "${boot_dir}/inc/dev/yarn.sh"
 
 # Finalise.
 source "${boot_dir}/inc/teardown.sh"
