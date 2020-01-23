@@ -2,6 +2,9 @@
 
 #### Unreleased
 
+#### v1.1.0 - 2020-01-23
+- Release `nodejs13` box
+
 #### v1.0.0 - 2020-01-14
 - Release `php70` box
 
