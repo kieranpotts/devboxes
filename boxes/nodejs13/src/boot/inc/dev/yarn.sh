@@ -19,3 +19,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 sudo apt-get update -qq > /dev/null
 sudo apt-get install -y -qq --no-install-recommends yarn &> /dev/null
+
+# Fix "EACCES permission denied" `scandir` error on some `yarn` commands.
+sudo mkdir /home/vagrant/.config
+sudo chown -R vagrant:vagrant /home/vagrant/.config
