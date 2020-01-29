@@ -29,10 +29,14 @@ Follow these instruction to build a new version of one of the local development 
     Destroy any previous builds of this box that may still exist on your local filesystem.
 
     ```sh
-    $ vagrant destroy
+    $ vagrant destroy --force
     ```
 
     To be sure, delete the `.vagrant` directory, too.
+
+    ```sh
+    $ rm -R .vagrant
+    ```
 
 2.  Run the following command to update the base base (eg `bento/ubuntu-18.04`) from which the local development box is extended.
 
