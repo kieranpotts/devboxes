@@ -54,7 +54,6 @@ coverage
 .eslintcache
 .grunt
 lib-cov
-*.lock
 .npm
 .nyc_output
 *.pid
