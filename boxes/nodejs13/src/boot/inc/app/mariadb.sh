@@ -38,4 +38,4 @@ host=localhost
 user=${mysql_dbuser}
 password=${mysql_dbpswd}
 host=localhost
-" | tee ~/.my.cnf > /dev/null
+" | tee ~/.my.cnf > /dev/null # @todo: Be specific with target file: /home/vagrant/.my.cnf
