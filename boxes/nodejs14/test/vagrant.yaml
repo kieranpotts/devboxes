@@ -1,6 +1,6 @@
 ---
   # The name of the base box.
-  box: kieranpotts/nodejs13-test
+  box: kieranpotts/nodejs14-test
 
   host:
 
@@ -11,7 +11,7 @@
   guest:
 
     # A name fo the guest VM. This must be unique.
-    name: node13js.devbox.local
+    name: node14js.devbox.local
 
     # The directory inside the guest VM which is mounted from
     # the `Vagrantfile` directory on the host machine.

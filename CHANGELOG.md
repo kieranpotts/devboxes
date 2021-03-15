@@ -1,6 +1,7 @@
 # Change Log
 
 #### Unreleased
+- Release `nodejs14` box
 - Fix Yarn EACCESS Error in `nodejs` box
 
 #### v1.1.0 - 2020-01-23

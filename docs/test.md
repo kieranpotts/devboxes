@@ -1,6 +1,6 @@
 # Test
 
-Having [built](built.md) a new version of one of the local development boxes, you should throughly test it before [deploying](deploy.md) the new release.
+Having [built](built.md) a new version of one of the local development boxes, you should thoroughly test it before [deploying](deploy.md) the new release.
 
 1.  Add the newly-generated `.box` file to your current VM provider (VirtualBox). Append `-test` to the name of the box to distinguish it from the production version. Use the `--force` flag to update any earlier versions of the test box you may have installed previously.
 
@@ -22,7 +22,7 @@ Having [built](built.md) a new version of one of the local development boxes, yo
     $ cd test
     ```
 
-3.  Check that the `vagrant.yaml` in the `test` directory references `kieranpotts/[name]-test`, like this:
+3.  Check that the `vagrant.yaml` file in the `test` directory references `kieranpotts/[name]-test`, like this:
 
     ```
     # The name of the base box.
@@ -45,7 +45,7 @@ Having [built](built.md) a new version of one of the local development boxes, yo
     $ cp boot/.env-example boot/.env
     ```   
 
-5.  Reprovision the test box from scatch by running the following command from the `test` directory.
+5.  Re-provision the test box from scratch by running the following command from the `test` directory.
 
     ```sh
     $ vagrant up --provision
@@ -60,7 +60,7 @@ Having [built](built.md) a new version of one of the local development boxes, yo
     192.168.50.10 www.test.devbox.local
     ```
 
-7.  When the provisioning is complete, open a web browser and browse to the following resource:
+7.  When the provisioning is complete, reload your web browser and browse to the following resource:
 
     ```
     https://test.devbox.local/
