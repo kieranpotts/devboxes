@@ -31,7 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Constrain box updates to the current major version number. An upgrade of any
   # major component of our server stack — for example, upgrading to a newer LTS
-  # release of Ubuntu or Node.js — is marked by a major version bump. Such major
+  # release of Ubuntu or Node — is marked by a major version bump. Such major
   # upgrades to the system software stack must be explicitly enabled on an
   # application-by-application basis, and only when continued compatibility is
   # ensured. That is why we don't want boxes automatically updating between
@@ -63,7 +63,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--cableconnected1", "on"]
 
     # By default, Virtualbox doesn't allow symlinks on shared folders (for
-    # security reasons). But installers for Node.js commonly create bin
+    # security reasons). But installers for Node commonly create bin
     # symlinks. Windows users must also boot the VM from a terminal
     # "running as Administrator" for this to work.
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate//v-root", "1"]

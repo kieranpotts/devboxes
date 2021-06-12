@@ -40,8 +40,8 @@ server {
 
   location / {
 
-    # Forward all requests to Node.js.
-    # The port must match what Node.js listens on internally.
+    # Forward all requests to Node.
+    # The port must match what Node listens on internally.
 
     proxy_pass http://127.0.0.1:3000;
     proxy_http_version 1.1;

@@ -2,7 +2,7 @@
 
 This box is for server-side web applications requiring the following software stack:
 
-- Node.js v13
+- Node v13
 - Nginx v1.14
 - MariaDB v10.2
 - MongoDB

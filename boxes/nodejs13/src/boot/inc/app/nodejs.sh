@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ------------------------------------------------------------------------------
-# Install Node.js.
+# Install Node.
 #
 # This will install the v13.x LTS release of Node.js from the NodeSource package
 # archives. @see https://github.com/nodesource/distributions
@@ -12,8 +12,8 @@
 # is set at the global level.
 # @see https://github.com/npm/npm/issues/9580#issuecomment-288937937
 #
-# PM2, a process manager for Node.js applications, provides an easy way to
-# daemonize application, so running them in the background as a service.
+# PM2 a process manager for Node applications, provides an easy way to daemonize
+# application, so running them in the background as a service.
 #
 # To check installed versions.
 #
@@ -27,7 +27,7 @@
 # @see https://nodejs.org/en/
 # ------------------------------------------------------------------------------
 
-startNewTask "Installing Node.js"
+startNewTask "Installing Node"
 
 curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - &> /dev/null
 sudo apt-get install -y -qq nodejs &> /dev/null
