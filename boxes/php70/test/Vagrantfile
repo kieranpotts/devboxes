@@ -9,7 +9,7 @@
 # ------------------------------------------------------------------------------
 
 # Specify the minimum Vagrant version required.
-Vagrant.require_version ">= 2.1.0"
+Vagrant.require_version ">= 2.2.0"
 
 # This file is compatible with version 2
 # of the Vagrantfile standard.
@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Our purpose-built development server
   # prepackaged as a Vagrant box.
-  config.vm.box = "kieranpotts/php70-test"
+  config.vm.box = configuration["box"]
 
   # Constrain box updates to the current major version number. An upgrade of any
   # major component of our server stack — for example, upgrading to a newer LTS
@@ -116,11 +116,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # The path to the provisioning script is local and relative to `Vagrantfile`.
   # Use `vagrant up --no-provision` to skip this.
   if File.exist?("./boot/provision.sh")
-    config.vm.provision "shell" do |script|
-      script.path = "./boot/provision.sh"
-      script.privileged = false
-      script.args = [configuration["guest"]["synced_folder"]]
-    end
+    config.vm.provision :shell, :path => "./boot/provision.sh",
+      :privileged => false,
+      :run => "always",
+      :args => [configuration["guest"]["synced_folder"]]
   end
 
   # Run the startup script every time the VM is started.

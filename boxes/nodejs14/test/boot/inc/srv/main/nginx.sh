@@ -51,7 +51,7 @@ server {
     proxy_cache_bypass \$http_upgrade;
   }
 }
-" | sudo tee /etc/nginx/sites-available/${application_hostname}.conf > /dev/null
+" | sudo tee /etc/nginx/sites-available/${application_hostname}.conf
 
 # Enable the application.
 sudo ln -fs /etc/nginx/sites-available/${application_hostname}.conf /etc/nginx/sites-enabled/

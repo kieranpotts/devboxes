@@ -1,5 +1,7 @@
 # `kieranpotts/nodejs13`
 
+> ℹ Node v13 is at end-of-life and is no longer maintained with security patches. It is recommended you upgrade to a current LTS version of Node.
+
 This box is for server-side web applications requiring the following software stack:
 
 - Node v13

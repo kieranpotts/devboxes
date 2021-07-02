@@ -8,4 +8,4 @@
 
 startNewTask "Installing htop"
 
-sudo apt-get -y -qq install htop &> /dev/null
+sudo apt-get -y install htop

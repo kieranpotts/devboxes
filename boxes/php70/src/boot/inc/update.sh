@@ -12,7 +12,7 @@ startNewTask "Updating the system"
 
 sudo timedatectl set-timezone UTC
 
-sudo apt-get -y -qq autoremove
-sudo apt-get -y -qq --purge remove && sudo apt-get -qq autoclean
+sudo apt-get -y autoremove
+sudo apt-get -y --purge remove && sudo apt-get autoclean
 
-sudo apt-get -qq update > /dev/null
+sudo apt-get update

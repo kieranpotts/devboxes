@@ -25,10 +25,10 @@
 
 startNewTask "Installing useful system utilities"
 
-sudo apt-get -y -qq install build-essential &> /dev/null
-sudo apt-get -y -qq install software-properties-common &> /dev/null
+sudo apt-get -y install build-essential
+sudo apt-get -y install software-properties-common
 
-sudo apt-get -y -qq install curl &> /dev/null
-sudo apt-get -y -qq install openssl libssl-dev &> /dev/null
-sudo apt-get -y -qq install python3-pip &> /dev/null
-sudo apt-get -y -qq install zip unzip &> /dev/null
+sudo apt-get -y install curl
+sudo apt-get -y install openssl libssl-dev
+sudo apt-get -y install python3-pip
+sudo apt-get -y install zip unzip

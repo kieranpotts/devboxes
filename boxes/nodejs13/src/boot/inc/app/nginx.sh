@@ -17,7 +17,7 @@
 
 startNewTask "Installing Nginx"
 
-sudo apt-get -y -qq install nginx &> /dev/null
+sudo apt-get -y install nginx
 
 sudo rm -rf /var/www/html
 sudo rm -f /etc/nginx/sites-enabled/default
@@ -27,4 +27,4 @@ sudo touch /var/log/nginx/access.log
 sudo touch /var/log/nginx/error.log
 
 sudo systemctl start nginx
-sudo systemctl --quiet enable nginx
+sudo systemctl enable nginx

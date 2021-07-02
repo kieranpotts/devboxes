@@ -41,21 +41,21 @@ keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 
 # [alt_names]
 # DNS.1 = ${application_alias}
-" | sudo tee ${application_ssl_cnf_path} > /dev/null
+" | sudo tee ${application_ssl_cnf_path}
 
 # Generate key.
-sudo su -c "openssl genrsa -out ${application_ssl_key_path} 2048" &> /dev/null
+sudo su -c "openssl genrsa -out ${application_ssl_key_path} 2048"
 
 # Create the certificate signing request (CSR).
 sudo su -c "openssl req -new -out ${application_ssl_csr_path} \
   -key ${application_ssl_key_path} \
-  -config ${application_ssl_cnf_path}" &> /dev/null
+  -config ${application_ssl_cnf_path}"
 
 # Sign the SSL certificate.
 sudo su -c "openssl x509 -req -days 3650 -in ${application_ssl_csr_path} \
   -signkey ${application_ssl_key_path} \
   -out ${application_ssl_crt_path} \
-  -extensions ext -extfile ${application_ssl_cnf_path}" &> /dev/null
+  -extensions ext -extfile ${application_ssl_cnf_path}"
 
 startNewTask "Configuring Nginx to serve the application"
 
@@ -114,7 +114,7 @@ server {
   }
 
 }
-" | sudo tee /etc/nginx/sites-available/${application_hostname}.conf > /dev/null
+" | sudo tee /etc/nginx/sites-available/${application_hostname}.conf
 
 # The application directory needs to be owned by the `www-data`
 # user and `www-data` group, and both user and group should have read

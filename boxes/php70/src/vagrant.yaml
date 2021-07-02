@@ -1,9 +1,10 @@
 ---
+
   host:
 
     # The IP address to be assigned by the host machine to
     # the guest virtual machine.
-    ip: 192.168.100.99
+    ip: 192.168.50.10
 
   guest:
 

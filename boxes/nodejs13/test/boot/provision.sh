@@ -22,6 +22,8 @@ synced_dir=$1
 # run from any location in the VM.
 boot_dir="${synced_dir}/boot"
 
+echo "${boot_dir}"
+
 # The environment configuration file is required.
 if [ ! -f "${boot_dir}/.env" ]; then
   echo "--> Environment configuration file not found, exiting..."

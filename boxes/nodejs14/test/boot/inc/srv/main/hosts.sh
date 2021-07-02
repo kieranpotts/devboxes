@@ -10,8 +10,8 @@
 
 startNewTask "Configuring /etc/hosts"
 
-echo "${application_hostname}" | sudo tee /etc/hostname > /dev/null
+echo "${application_hostname}" | sudo tee /etc/hostname
 
-sudo tee /etc/hosts <<EOF > /dev/null
+sudo tee /etc/hosts <<EOF
 127.0.0.1 ${application_hostname} ${application_alias} vagrant localhost
 EOF

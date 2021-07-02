@@ -29,14 +29,14 @@
 
 startNewTask "Installing Node"
 
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - &> /dev/null
-sudo apt-get install -y -qq nodejs &> /dev/null
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
-sudo tee "/usr/etc/npmrc" <<EOF &> /dev/null
+sudo tee "/usr/etc/npmrc" <<EOF
 strict-ssl=false
 EOF
 
-sudo npm install -g --silent pm2 &> /dev/null
+sudo npm install -g pm2
 
 # PM2 startup script.
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup upstart -u vagrant --hp /home/vagrant &> /dev/null
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup upstart -u vagrant --hp /home/vagrant

@@ -8,7 +8,7 @@
 
 startNewTask "Installing Git"
 
-sudo apt-get -y -qq install git &> /dev/null
+sudo apt-get -y install git
 
 git config --global user.name "${git_user_name}"
 git config --global user.email "${git_user_email}"

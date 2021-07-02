@@ -8,4 +8,4 @@
 
 startNewTask "Installing tmux"
 
-sudo apt-get -y -qq install tmux &> /dev/null
+sudo apt-get -y install tmux

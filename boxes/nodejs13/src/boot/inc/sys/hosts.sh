@@ -8,6 +8,6 @@
 
 startNewTask "Configuring /etc/hosts"
 
-sudo tee /etc/hosts <<EOF > /dev/null
+sudo tee /etc/hosts <<EOF
 127.0.0.1 vagrant localhost
 EOF

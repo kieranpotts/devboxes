@@ -1,6 +1,6 @@
 # Requirements
 
-These Vagrant boxes support only the [VirtualBox](https://www.virtualbox.org/) virtual machine provider. VirtualBox is a free, cross-platform virtualization application that is actively developed by Oracle.
+To build new devboxes from the source code in this repository, you'll need the following software installed on your computer:
 
-- Vagrant >= v2.1.0
-- VirtualBox >= v5.2.0
+- Vagrant ^2.2.0
+- VirtualBox ^6.0.0

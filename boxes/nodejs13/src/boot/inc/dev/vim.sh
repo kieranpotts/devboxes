@@ -8,4 +8,4 @@
 
 startNewTask "Installing Vim"
 
-sudo apt-get -y -qq install vim &> /dev/null
+sudo apt-get -y install vim

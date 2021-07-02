@@ -9,6 +9,6 @@
 
 startNewTask "Configuring /etc/hosts"
 
-sudo tee -a /etc/hosts <<EOF > /dev/null
+sudo tee -a /etc/hosts <<EOF
 127.0.0.1 ${application_hostname}
 EOF

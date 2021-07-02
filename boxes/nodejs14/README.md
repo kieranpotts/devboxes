@@ -9,7 +9,7 @@ This box is for server-side web applications requiring the following software st
 - Redis v4
 - Sendmail v8
 
-The operating system is Ubuntu v18.04 LTS and the following system libraries are included:
+The operating system is Ubuntu v18.04 LTS and the following system software is included:
 
 - cURL
 - OpenSSL

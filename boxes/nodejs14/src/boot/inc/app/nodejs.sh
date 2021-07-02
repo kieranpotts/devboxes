@@ -36,7 +36,7 @@ sudo tee "/usr/etc/npmrc" <<EOF
 strict-ssl=false
 EOF
 
-sudo npm install -g --silent pm2
+sudo npm install -g pm2
 
 # PM2 startup script.
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup upstart -u vagrant --hp /home/vagrant

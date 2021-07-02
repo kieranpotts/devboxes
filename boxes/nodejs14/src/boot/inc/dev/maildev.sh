@@ -13,4 +13,4 @@
 
 startNewTask "Installing MailDev"
 
-sudo npm install -g maildev --silent
+sudo npm install -g maildev

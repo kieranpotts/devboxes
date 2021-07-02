@@ -9,7 +9,7 @@
 # ------------------------------------------------------------------------------
 
 # Specify the minimum Vagrant version required.
-Vagrant.require_version ">= 2.1.0"
+Vagrant.require_version ">= 2.2.0"
 
 # This file is compatible with version 2
 # of the Vagrantfile standard.

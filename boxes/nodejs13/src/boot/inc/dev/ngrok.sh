@@ -11,4 +11,4 @@ startNewTask "Installing Ngrok"
 
 # The `ngrok` package is available for Ubuntu 16.04 LTS (and later versions)
 # from the Snap Store. @see https://snapcraft.io/install/ngrok/ubuntu
-sudo snap install ngrok > /dev/null
+sudo snap install ngrok
