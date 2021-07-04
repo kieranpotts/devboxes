@@ -38,7 +38,7 @@ To be sure, delete the `.vagrant` directory, too.
 $ rm -rf .vagrant
 ```
 
-Run the following command to update the base base (eg `bento/ubuntu-18.04`) from which the local development box is extended.
+Run the following command to update the base base (eg `bento/ubuntu-18.04`) from which the local development box is extended. (If the base box has not previously been downloaded to your system, it will be in the next `vagrant up` step.)
 
 ```sh
 $ vagrant box update

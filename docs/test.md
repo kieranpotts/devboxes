@@ -30,13 +30,7 @@ box: kieranpotts/[name]-test
 Destroy previous builds of the test box.
 
 ```sh
-$ vagrant destroy --force
-```
-
-To be sure, delete the `./test/.vagrant` directory, too.
-
-```sh
-$ rm -rf .vagrant
+$ vagrant destroy --force && rm -rf .vagrant
 ```
 
 Create an environment configuration file, `.env`, in the `boot` directory. You can just copy the example configuration file, `.env-example`.
