@@ -1,0 +1,21 @@
+# This file encapsulates settings that are imported into the Vagrantfile script,
+# which itself defines in code the VM's specification.
+
+host:
+
+  # A local private network IP address to be assigned by the host machine to the
+  # guest virtual machine. You can use the following IP ranges:
+  # - 10.0.0.1 ... 10.255.255.254
+  # - 172.16.0.1 ... 172.31.255.254
+  # - 192.168.0.1 ... 192.168.255.254
+  ip: 192.168.50.10
+
+guest:
+
+  # A unique identifier for the guest VM. This is required by VirtualBox.
+  # This name will identify the box in the VirtualBox GUI.
+  name: kieranpotts-node14js
+
+  # The directory inside the guest VM which is mounted from
+  # the `Vagrantfile` directory on the host machine.
+  synced_folder: /home/vagrant/synced

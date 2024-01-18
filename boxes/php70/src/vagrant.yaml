@@ -1,0 +1,13 @@
+---
+
+  host:
+
+    # The IP address to be assigned by the host machine to
+    # the guest virtual machine.
+    ip: 192.168.50.10
+
+  guest:
+
+    # The directory inside the guest VM which is mounted from
+    # the `Vagrantfile` directory on the host machine.
+    synced_folder: /home/vagrant/synced

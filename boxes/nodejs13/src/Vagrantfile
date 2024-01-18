@@ -1,0 +1,65 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# ------------------------------------------------------------------------------
+# Vagrant configuration file.
+#
+# The most common configuration options are documented in inline comments below.
+# @see //docs.vagrantup.com/
+# ------------------------------------------------------------------------------
+
+# Specify the minimum Vagrant version required.
+Vagrant.require_version ">= 2.2.0"
+
+# This file is compatible with version 2
+# of the Vagrantfile standard.
+VAGRANTFILE_API_VERSION = "2"
+
+# Load settings from `vagrant.yaml`.
+require 'yaml'
+if File.exist?("vagrant.yaml")
+  configuration = YAML.load_file("vagrant.yaml")
+else
+  raise Vagrant::Errors::VagrantError.new, "vagrant.yaml not found"
+end
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  # We use the Bento boxes as our base boxes. They ship barebones systems and
+  # are built to support a number of virtual machine providers including
+  # VirtualBox, VMWare and Parallels.
+  # @see //app.vagrantup.com/bento
+  config.vm.box = "bento/ubuntu-18.04"
+
+  # There is no need to generate a unique keypair for SSH
+  # if the VM will be accessed locally only.
+  config.ssh.insert_key = false
+
+  # Allocate a local private network IP address to the VM. You can use the
+  # following IP ranges:
+  # - 10.0.0.1 ... 10.255.255.254
+  # - 172.16.0.1 ... 172.31.255.254
+  # - 192.168.0.1 ... 192.168.255.254
+  config.vm.network :private_network, :ip => configuration["host"]["ip"]
+
+  # Port forwarding.
+  config.vm.network :forwarded_port, :guest => 80, :host => 8080
+  config.vm.network :forwarded_port, :guest => 443, :host => 443
+
+  # Disable the default `/vagrant` directory share...
+  config.vm.synced_folder ".", "/vagrant", :disabled => true
+
+  # ... instead, map this project's root directory on the host machine to
+  # `/home/vagrant/synced` inside the guest VM.
+  config.vm.synced_folder ".", configuration["guest"]["synced_folder"],
+    :create => true,
+    :group => "vagrant", :owner => "vagrant",
+    :mount_options => ["dmode=777", "fmode=666"]
+
+  # Provision the server by installing system-level requirements.
+  # The path to the provisioning script is local and relative to `Vagrantfile`.
+  config.vm.provision :shell, :path => "./boot/provision.sh",
+    :privileged => false,
+    :args => [configuration["guest"]["synced_folder"]]
+
+end
